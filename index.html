@@ -24,10 +24,15 @@
 
       .app {
         display: flex;
+        flex-direction: column;
         width: 100vw;
         height: 100vh;
         gap: 8px;
         padding: 8px;
+
+        @media (orientation: landscape) {
+          flex-direction: row;
+        }
       }
 
       .pane {
@@ -69,12 +74,6 @@
       textarea[readonly] {
         background: #fbfbfb;
         color: #3f3f46;
-      }
-
-      @media (orientation: landscape) {
-        .app {
-          flex-direction: row;
-        }
       }
     </style>
   </head>
